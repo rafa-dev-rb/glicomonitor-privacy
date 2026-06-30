@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Política de Privacidade — GlicoMonitor</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.7;
+    }
+    header {
+      background: #208AEF;
+      color: white;
+      padding: 40px 24px;
+      text-align: center;
+    }
+    header h1 { font-size: 28px; font-weight: 700; margin-bottom: 8px; }
+    header p { font-size: 15px; opacity: 0.85; }
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 28px;
+      margin-bottom: 20px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    }
+    h2 {
+      font-size: 18px;
+      color: #208AEF;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    p { font-size: 15px; color: #444; margin-bottom: 12px; }
+    ul { padding-left: 20px; margin-bottom: 12px; }
+    li { font-size: 15px; color: #444; margin-bottom: 6px; }
+    .badge {
+      display: inline-block;
+      background: #e8f4ff;
+      color: #208AEF;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 2px 10px;
+      border-radius: 20px;
+      margin-bottom: 16px;
+    }
+    .highlight {
+      background: #fff8e1;
+      border-left: 4px solid #FFA000;
+      padding: 14px 16px;
+      border-radius: 4px;
+      font-size: 14px;
+      color: #555;
+      margin-top: 12px;
+    }
+    .contact {
+      background: #e8f4ff;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      margin-top: 8px;
+    }
+    .contact a { color: #208AEF; text-decoration: none; font-weight: 600; }
+    footer {
+      text-align: center;
+      font-size: 13px;
+      color: #999;
+      padding: 24px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>💉 GlicoMonitor</h1>
+  <p>Política de Privacidade</p>
+</header>
+
+<div class="container">
+
+  <div class="card">
+    <span class="badge">Última atualização: junho de 2026</span>
+    <p>
+      Esta Política de Privacidade descreve como o <strong>GlicoMonitor</strong>, 
+      desenvolvido por <strong>RafaDEV</strong>, coleta, utiliza e protege as 
+      informações dos usuários. Ao usar o aplicativo, você concorda com as 
+      práticas descritas neste documento.
+    </p>
+    <div class="highlight">
+      ⚠️ O GlicoMonitor é uma ferramenta de apoio ao monitoramento de glicose e 
+      <strong>não substitui avaliação médica profissional</strong>. Consulte sempre 
+      seu médico endocrinologista.
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>📋 Informações que coletamos</h2>
+    <p>O GlicoMonitor pode coletar e armazenar as seguintes informações:</p>
+    <ul>
+      <li><strong>Leituras de glicose:</strong> valores, horários e contexto registrados pelo usuário</li>
+      <li><strong>Dados de configuração:</strong> nome do paciente, faixas-alvo de glicose e horários de insulina</li>
+      <li><strong>Código familiar:</strong> identificador gerado para o modo de monitoramento familiar</li>
+      <li><strong>Identificador anônimo:</strong> gerado automaticamente pelo Firebase para autenticação, sem vínculo com dados pessoais identificáveis</li>
+    </ul>
+    <p>Não coletamos nome completo, e-mail, CPF, telefone ou qualquer dado de identificação pessoal obrigatório.</p>
+  </div>
+
+  <div class="card">
+    <h2>📍 Como usamos as informações</h2>
+    <p>As informações coletadas são usadas exclusivamente para:</p>
+    <ul>
+      <li>Exibir histórico e análises de glicose ao próprio usuário</li>
+      <li>Gerar relatórios em PDF para uso médico</li>
+      <li>Compartilhar leituras em tempo real no modo familiar (somente com pessoas que possuem o código)</li>
+      <li>Enviar notificações de alarme de insulina no dispositivo do usuário</li>
+    </ul>
+    <p>Não utilizamos as informações para publicidade, marketing ou qualquer finalidade comercial.</p>
+  </div>
+
+  <div class="card">
+    <h2>☁️ Armazenamento e segurança</h2>
+    <ul>
+      <li><strong>Dados locais:</strong> leituras de glicose são armazenadas no dispositivo do usuário via AsyncStorage</li>
+      <li><strong>Dados na nuvem:</strong> quando o modo familiar está ativo, leituras são sincronizadas com o Firebase Firestore (Google), protegido por autenticação e regras de acesso restrito</li>
+      <li><strong>Autenticação:</strong> utilizamos autenticação anônima do Firebase — nenhuma senha ou e-mail é necessário</li>
+      <li><strong>Acesso familiar:</strong> apenas usuários com o código familiar correto podem acessar as leituras compartilhadas</li>
+    </ul>
+    <div class="highlight">
+      🔒 Os dados de saúde são sensíveis. Não compartilhe seu código familiar com pessoas não autorizadas.
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>🤖 Assistente de IA (Gemini)</h2>
+    <p>
+      O GlicoMonitor utiliza a API Gemini (Google) para o assistente de saúde integrado. 
+      As mensagens enviadas ao assistente são processadas pelos servidores do Google 
+      conforme a <a href="https://policies.google.com/privacy" target="_blank" style="color:#208AEF">Política de Privacidade do Google</a>.
+    </p>
+    <p>
+      O assistente é configurado exclusivamente para fornecer informações sobre 
+      diabetes tipo 1 e monitoramento de glicose, e não armazena histórico de 
+      conversas entre sessões.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>👨‍👩‍👧 Modo Familiar</h2>
+    <p>
+      O modo familiar permite que um cuidador monitore as leituras de glicose 
+      de um paciente em tempo real. Para isso:
+    </p>
+    <ul>
+      <li>O paciente gera um código único de 6 caracteres</li>
+      <li>Apenas quem possui esse código pode acessar as leituras</li>
+      <li>O paciente pode encerrar o compartilhamento a qualquer momento saindo do modo familiar</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>🔔 Notificações</h2>
+    <p>
+      O app pode enviar notificações locais para lembretes de aplicação de insulina. 
+      Essas notificações são processadas inteiramente no dispositivo do usuário e 
+      não envolvem coleta ou transmissão de dados.
+    </p>
+    <p>O usuário pode desativar as notificações a qualquer momento nas configurações do dispositivo ou do aplicativo.</p>
+  </div>
+
+  <div class="card">
+    <h2>🧒 Uso por menores</h2>
+    <p>
+      O GlicoMonitor pode ser usado por menores de idade sob supervisão de um 
+      responsável legal. Não coletamos intencionalmente dados de crianças sem 
+      consentimento dos responsáveis.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>🗑️ Exclusão de dados</h2>
+    <p>
+      O usuário pode excluir seus dados a qualquer momento:
+    </p>
+    <ul>
+      <li><strong>Dados locais:</strong> desinstalar o aplicativo remove todos os dados armazenados no dispositivo</li>
+      <li><strong>Dados na nuvem:</strong> sair do modo familiar encerra o compartilhamento; para exclusão completa dos dados do Firestore, entre em contato pelo e-mail abaixo</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>📝 Alterações nesta política</h2>
+    <p>
+      Esta política pode ser atualizada periodicamente. Alterações significativas 
+      serão comunicadas por meio de atualização do aplicativo. O uso continuado 
+      do GlicoMonitor após alterações implica aceitação da nova política.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>📬 Contato</h2>
+    <div class="contact">
+      <p>Dúvidas, solicitações de exclusão de dados ou qualquer questão sobre privacidade:</p>
+      <p style="margin-top:12px">
+        <a href="mailto:rafati3d@gmail.com">rafati3d@gmail.com</a>
+      </p>
+      <p style="margin-top:8px; font-size:13px; color:#666">Desenvolvido por RafaDEV — Brasil</p>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  © 2026 GlicoMonitor — RafaDEV. Todos os direitos reservados.
+</footer>
+
+</body>
+</html>
